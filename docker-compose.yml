@@ -1,0 +1,10 @@
+logstash:
+  image: jmeritt/logstash
+  links:
+    - elastic
+elastic:
+  image: jmeritt/elasticsearch
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  
